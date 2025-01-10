@@ -35,8 +35,10 @@ Veure Notícies Guardades: Es poden veure totes les notícies guardades tocant e
 
 Detalls de la Notícia: En tocar una notícia, s'accedeix a una nova pantalla amb tota la informació detallada de la notícia, incloent-hi la descripció i la imatge (si està disponible).
 
-Captures de Pantalla 📸
-Aquí pots afegir algunes captures de pantalla de l'aplicació en funcionament:
+## **Captures de Pantalla** 📸
+Captures de pantalla de l'aplicació en funcionament:
+![image](https://github.com/user-attachments/assets/862e55e6-9361-4b03-966b-52f73cfa45a4)
+
 
 
 ## **Contribucions** 🤝
