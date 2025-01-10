@@ -35,19 +35,6 @@ Veure Notícies Guardades: Es poden veure totes les notícies guardades tocant e
 
 Detalls de la Notícia: En tocar una notícia, s'accedeix a una nova pantalla amb tota la informació detallada de la notícia, incloent-hi la descripció i la imatge (si està disponible).
 
-## **Estructura del Projecte** 📂
-plaintext
-Copiar código
-lib/
-├── controllers/
-│   └── news_controller.dart       # Controlador principal de notícies
-├── model/
-│   └── article.dart              # Model de la notícia
-├── pages/
-│   ├── home_page.dart            # Pantalla principal
-│   └── news_detail_page.dart     # Detalls de la notícia
-assets/
-└── images/                       # Conté imatges i altres recursos
 Captures de Pantalla 📸
 Aquí pots afegir algunes captures de pantalla de l'aplicació en funcionament:
 
@@ -88,3 +75,18 @@ Executa l'aplicació: Amb l'emulador o dispositiu físic configurat, executa:
 
 bash
 flutter run
+
+
+## **Estructura del Projecte** 📂
+```plaintext
+
+lib/
+├── controllers/
+│   └── news_controller.dart       # Controlador principal de notícies
+├── model/
+│   └── article.dart              # Model de la notícia
+├── pages/
+│   ├── home_page.dart            # Pantalla principal
+│   └── news_detail_page.dart     # Detalls de la notícia
+assets/
+└── images/                       # Conté imatges i altres recursos
