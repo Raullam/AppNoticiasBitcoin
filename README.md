@@ -26,11 +26,7 @@ Aquest projecte és una aplicació mòbil creada amb **Flutter** i **GetX** que 
 2. Tenir un **emulador de dispositiu** configurat o un dispositiu físic connectat.
 3. Tenir accés a una **API Key** de NewsAPI. Pots obtenir-la registrant-te a [NewsAPI](https://newsapi.org/).
 
-## **Tecnologies Utilitzades** ⚙️   
-## **Instal·la les dependències: Assegura't d'estar a la carpeta arrel del projecte i executa:
-
-
-## **Funcionalitats ✨
+## **Funcionalitats** ✨
 Obtenir Notícies: Al iniciar l'aplicació, es carreguen automàticament 5 notícies relacionades amb un tema (exemple: "bitcoin") i es mostren a la pantalla principal.
 
 Guardar Notícies: Es poden guardar notícies tocant el botó de guardar. Aquestes notícies es guarden a la memòria de l'aplicació.
@@ -39,7 +35,7 @@ Veure Notícies Guardades: Es poden veure totes les notícies guardades tocant e
 
 Detalls de la Notícia: En tocar una notícia, s'accedeix a una nova pantalla amb tota la informació detallada de la notícia, incloent-hi la descripció i la imatge (si està disponible).
 
-## **Estructura del Projecte 📂
+## **Estructura del Projecte** 📂
 plaintext
 Copiar código
 lib/
@@ -56,13 +52,13 @@ Captures de Pantalla 📸
 Aquí pots afegir algunes captures de pantalla de l'aplicació en funcionament:
 
 
-## **Contribucions 🤝
+## **Contribucions** 🤝
 Si vols contribuir a aquest projecte, pots fer un fork i crear un pull request amb els teus canvis. Assegura't de seguir l'estil de codi establert i proporcionar una descripció clara dels canvis realitzats.
 
-## **Llicència 📝
+## **Llicència** 📝
 Aquest projecte està licenciat sota la Llicència MIT. Consulta el fitxer LICENSE per obtenir més informació.
 
-## **Resum del Codi Principal 🧑‍💻
+## **Resum del Codi Principal** 🧑‍💻
 NewsController:
 El controlador NewsController és el responsable d'obtenir les notícies des de l'API, gestionar-les i mantenir les notícies guardades. Utilitza GetX per gestionar l'estat reactiu de les llistes de notícies.
 
@@ -79,6 +75,8 @@ Mostra els detalls complets d'una notícia quan l'usuari la selecciona de la lli
    ```bash
    git clone <URL del repositori>
    cd <nom del repositori>
+   
+## **Instal·la les dependències: Assegura't d'estar a la carpeta arrel del projecte i executa:**
 
 ````bash
 flutter pub get
