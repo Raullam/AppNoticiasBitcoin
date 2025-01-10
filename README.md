@@ -78,7 +78,6 @@ flutter run
 
 
 ## **Estructura del Projecte** 📂
-```plaintext
 
 lib/
 ├── controllers/
