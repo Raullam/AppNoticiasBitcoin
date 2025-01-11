@@ -1,4 +1,4 @@
-# Aplicació de Notícies amb GetX** 📱📰
+# Aplicació de Notícies amb GetX 📱📰
 
 Aquest projecte és una aplicació mòbil creada amb **Flutter** i **GetX** que permet als usuaris consultar, guardar i veure notícies en temps real. L'aplicació fa servir una **API de notícies** per obtenir articles sobre un tema específic (per exemple, "bitcoin") i mostrar informació detallada sobre cadascun d'ells. Els usuaris poden guardar notícies i veure-les a un apartat de "Notícies Guardades".
 
