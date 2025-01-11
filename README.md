@@ -4,9 +4,9 @@ Aquest projecte és una aplicació mòbil creada amb **Flutter** i **GetX** que 
 
 ## **Característiques Principals** 🔑
 
-- 📰 **Interfície neta i senzilla**: L'aplicació ofereix una interfície intuïtiva per mostrar les notícies obtingudes de l'API de forma clara i atractiva.
+- 📰 **Interfície**: L'aplicació ofereix una interfície intuïtiva per mostrar les notícies obtingudes de l'API de forma clara i atractiva.
 - 🔄 **Obtenció dinàmica de notícies**: Les notícies es poden actualitzar en temps real amb un botó d'actualització.
-- 💾 **Guardar notícies favorites**: Els usuaris poden guardar notícies i consultar-les més tard a la secció de "Notícies Guardades".
+- 💾 **Guardar notícies**: Els usuaris poden guardar notícies i consultar-les més tard a la secció de "Notícies Guardades".
 - 📖 **Detalls de les notícies**: Es pot tocar sobre qualsevol notícia per veure'n més informació, incloent-hi la descripció completa, la data de publicació i la imatge de la notícia.
 - 🛠️ **Controlador GetX**: El controlador `NewsController` gestiona la lògica de càrrega, emmagatzematge i visualització de les notícies.
 
@@ -69,7 +69,8 @@ Mostra els detalls complets d'una notícia quan l'usuari la selecciona de la lli
 
 ````bash
 flutter pub get
-Configura la teva API Key: Aneu al fitxer news_controller.dart i substituïu el valor de api_key amb la vostra pròpia clau de l'API de NewsAPI:
+Configura la teva API Key:
+Aneu al fitxer news_controller.dart i substituïu el valor de api_key amb la vostra pròpia clau de l'API de NewsAPI.
 
 dart
 var api_key = "LA_TUYA_API_KEY";
