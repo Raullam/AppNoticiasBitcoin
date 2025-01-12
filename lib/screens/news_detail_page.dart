@@ -1,9 +1,20 @@
+// Importar el paquete material.dart
+
 import 'package:flutter/material.dart';
+
+// Importar el paquete GetX
+
 import 'package:get/get.dart';
+
+// Importar el modelo de datos Article
 import '../model/article.dart';
 
+// Clase para mostrar los detalles de un artículo de noticias
+
 class NewsDetailPage extends StatelessWidget {
-  final Article article;
+  final Article article; // Objeeto Article
+
+  // Constructor que requiere un objeto Article como parámetro
 
   NewsDetailPage({required this.article});
 
@@ -16,20 +27,27 @@ class NewsDetailPage extends StatelessWidget {
     String formattedDate =
         publishedDate.replaceAll('T', ' ').replaceAll('Z', '');
 
+    // Esttructura de la página de detalles de la noticia
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Detalle de la Noticia"),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          onPressed: () => Get.back(), // Navegar hacia atrás
+          onPressed: () => Get.back(), // Navegar hacia atrás usando GetX
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ),
       ),
+
+      // Cuerpo de la página
+
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Comprueba si hay una URL válida para la imagen
+
             article.urlToImage.isNotEmpty
                 ? Image.network(
                     article.urlToImage,
@@ -40,24 +58,33 @@ class NewsDetailPage extends StatelessWidget {
                 : Container(
                     height: 250,
                     color: Colors.grey), // Placeholder para la imagen
+
+            // Título del artículo
+
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                article.title,
+                article.title, // Título del artículo
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
+
+            // Fecha de publicación
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
-                "Publicado: ${formattedDate}",
+                "Publicado: ${formattedDate}", // Fecha de publicación
                 style: TextStyle(color: Colors.grey, fontSize: 14),
               ),
             ),
+
+            // Descripción del artículo
+
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                article.description,
+                article.description, // Descripción del artículo
                 style: TextStyle(fontSize: 16),
               ),
             ),

@@ -1,16 +1,35 @@
+// Paquete principal para construir interfaces en Flutter
+
 import 'package:flutter/material.dart';
+
+// Importar GetX
+
 import 'package:get/get.dart';
+
+// Importar el controlador de noticias
+
 import '../controllers/news_controller.dart';
+
+// Importar el modelo de datos Article
+
 import '../model/article.dart';
-import 'news_detail_page.dart'; // Importar la página de detalle
+
+// Importar la página de detalle
+
+import 'news_detail_page.dart';
+
+// Página principal de la aplicación
 
 class HomePage extends StatelessWidget {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  final NewsController newsController = Get.put(NewsController());
+  final NewsController newsController = Get.put(
+      NewsController()); // Instancia del controlador de noticias usando GetX
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   @override
   Widget build(BuildContext context) {
+    // Estructura de la página principal
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Noticias API - GetX"),
@@ -19,12 +38,17 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
+            // Observa cambios en el controlador usando Obx
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
             child: Obx(() {
+              // Muestra un indicador de carga mientras las noticias se están cargando
+
               if (newsController.isLoading.value) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 return const Center(child: CircularProgressIndicator());
               } else {
+                // Si no hay noticias, muestra un mensaje
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 if (newsController.currentNews.isEmpty) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,11 +60,15 @@ class HomePage extends StatelessWidget {
                   );
                 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                // Muestra la lista de noticias usando ListView.builder
                 return ListView.builder(
-                  itemCount: newsController.currentNews.length,
+                  itemCount:
+                      newsController.currentNews.length, // Número de noticias
                   itemBuilder: (context, index) {
-                    Article article = newsController.currentNews[index];
+                    Article article =
+                        newsController.currentNews[index]; // Artículo actual
                     return GestureDetector(
+                      // Navegar a la página de detalles al hacer clic en una noticia
                       onTap: () {
                         Get.to(() => NewsDetailPage(article: article));
                       },
@@ -50,6 +78,7 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // Comprueba si hay una URL válida para la imagen
                             article.urlToImage.isNotEmpty
                                 ? Image.network(
                                     article.urlToImage,
@@ -98,16 +127,20 @@ class HomePage extends StatelessWidget {
             }),
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
           ),
+          // Botones de acción para actualizar, guardar y cargar noticias
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              // Botón para actualizar las noticias
               ElevatedButton(
-                onPressed: () => newsController.fetchNews(),
+                onPressed: () =>
+                    newsController.fetchNews(), // Actualizar noticias
                 child: const Icon(Icons.update),
               ),
+              // Botón para guardar las noticias
               ElevatedButton(
                 onPressed: () {
-                  newsController.saveNews();
+                  newsController.saveNews(); // Guardar noticias
 
                   Get.dialog(
                     AlertDialog(
@@ -122,17 +155,20 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Icon(Icons.save_alt_outlined),
               ),
+              // Botón para cargar las noticias guardadas
               ElevatedButton(
-                onPressed: () => newsController.loadSavedNews(),
+                onPressed: () =>
+                    newsController.loadSavedNews(), // Cargar noticias
                 child: const Text("Noticias Guardadas"),
               ),
             ],
           ),
           const Divider(),
+          // Muestra el número de noticias guardadas usando Obx
           Obx(() => Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "Noticias Guardadas: ${newsController.savedNews.length}",
+                  "Noticias Guardadas: ${newsController.savedNews.length}", // Número de noticias guardadas
                   style: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.bold),
                 ),

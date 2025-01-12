@@ -1,7 +1,20 @@
+// Importar GetX
+
 import 'package:get/get.dart';
+
+// Importar la biblioteca HTTP para realizar solicitudes de red
+
 import 'package:http/http.dart' as http;
+
+// Importa para trabajar con datos JSON
+
 import 'dart:convert';
-import '../model/article.dart'; // Importar la clase NewsArticle
+
+// Importar el modelo de datos Article
+
+import '../model/article.dart';
+
+// Controlador para manejar el estado y la lógica de las notícias
 
 class NewsController extends GetxController {
   var currentNews = <Article>[].obs; // Lista de artículos actuales
@@ -52,6 +65,8 @@ class NewsController extends GetxController {
       isLoading(false); // Detiene el indicador de carga
     }
   }
+
+  // Método para guardar las noticias actuales
 
   void saveNews() {
     // Solo agrega las noticias actuales a la lista de noticias guardadas
